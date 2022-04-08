@@ -122,6 +122,12 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "flutter_web_plugins",
+      "rootUri": "file:///Users/steveblythe/Documents/Flutter/packages/flutter_web_plugins",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "http",
       "rootUri": "file:///Users/steveblythe/Documents/Flutter/.pub-cache/hosted/pub.dartlang.org/http-0.13.4",
       "packageUri": "lib/",
@@ -130,6 +136,12 @@
     {
       "name": "http_parser",
       "rootUri": "file:///Users/steveblythe/Documents/Flutter/.pub-cache/hosted/pub.dartlang.org/http_parser-4.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "js",
+      "rootUri": "file:///Users/steveblythe/Documents/Flutter/.pub-cache/hosted/pub.dartlang.org/js-0.6.3",
       "packageUri": "lib/",
       "languageVersion": "2.12"
     },
@@ -254,6 +266,54 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "shared_preferences",
+      "rootUri": "file:///Users/steveblythe/Documents/Flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences-2.0.13",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "shared_preferences_android",
+      "rootUri": "file:///Users/steveblythe/Documents/Flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_android-2.0.11",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "shared_preferences_ios",
+      "rootUri": "file:///Users/steveblythe/Documents/Flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_ios-2.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.14"
+    },
+    {
+      "name": "shared_preferences_linux",
+      "rootUri": "file:///Users/steveblythe/Documents/Flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_linux-2.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "shared_preferences_macos",
+      "rootUri": "file:///Users/steveblythe/Documents/Flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_macos-2.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "shared_preferences_platform_interface",
+      "rootUri": "file:///Users/steveblythe/Documents/Flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_platform_interface-2.0.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "shared_preferences_web",
+      "rootUri": "file:///Users/steveblythe/Documents/Flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_web-2.0.3",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "shared_preferences_windows",
+      "rootUri": "file:///Users/steveblythe/Documents/Flutter/.pub-cache/hosted/pub.dartlang.org/shared_preferences_windows-2.1.0",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "sky_engine",
       "rootUri": "file:///Users/steveblythe/Documents/Flutter/bin/cache/pkg/sky_engine",
       "packageUri": "lib/",
@@ -356,7 +416,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2022-04-07T21:01:37.943740Z",
+  "generated": "2022-04-08T20:22:32.196508Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }
