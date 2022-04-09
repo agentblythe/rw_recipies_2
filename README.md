@@ -8,3 +8,7 @@
 - The shared_preferences plugin should not be used to hold sensitive data. Instead, consider using the flutter_secure_storage plugin.
 
 ## Chapter 10 - Serialization With JSON
+- JSON is an open-standard format used on the web and in mobile clients, especially with REST APIs.
+- In mobile apps, JSON code is usually parsed into the model objects that your app will work with.
+- You can write JSON parsing code yourself, but it’s usually easier to let a JSON package generate the parsing code for you.
+- json_annotation and json_serializable are packages that will let you generate the parsing code.
