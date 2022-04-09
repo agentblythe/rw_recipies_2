@@ -6,3 +6,5 @@
 - An example of when to use shared preferences is to save the tab a user is viewing, so the next time the user starts the app, they’re brought to the same tab.
 - The async/await keyword pair let you run asynchronous code off the main UI thread and then wait for the response. An example is getting an instance of SharedPreferences.
 - The shared_preferences plugin should not be used to hold sensitive data. Instead, consider using the flutter_secure_storage plugin.
+
+## Chapter 10 - Serialization With JSON
