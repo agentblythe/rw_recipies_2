@@ -116,6 +116,18 @@
       "languageVersion": "2.12"
     },
     {
+      "name": "chopper",
+      "rootUri": "file:///Users/steveblythe/Documents/Flutter/.pub-cache/hosted/pub.dartlang.org/chopper-4.0.5",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
+      "name": "chopper_generator",
+      "rootUri": "file:///Users/steveblythe/Documents/Flutter/.pub-cache/hosted/pub.dartlang.org/chopper_generator-4.0.1",
+      "packageUri": "lib/",
+      "languageVersion": "2.12"
+    },
+    {
       "name": "cli_util",
       "rootUri": "file:///Users/steveblythe/Documents/Flutter/.pub-cache/hosted/pub.dartlang.org/cli_util-0.3.5",
       "packageUri": "lib/",
@@ -644,7 +656,7 @@
       "languageVersion": "2.12"
     }
   ],
-  "generated": "2022-04-10T18:37:03.083366Z",
+  "generated": "2022-04-11T18:06:08.938043Z",
   "generator": "pub",
   "generatorVersion": "2.16.2"
 }

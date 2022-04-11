@@ -4,12 +4,13 @@ import 'package:flutter/material.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import '../widgets/custom_dropdown.dart';
 import '../colors.dart';
-import 'dart:convert';
 import '../../network/recipe_model.dart';
 import 'package:flutter/services.dart';
 import '../recipe_card.dart';
 import 'recipe_details.dart';
 import '../../network/recipe_service.dart';
+import 'package:chopper/chopper.dart';
+import '../../network/model_response.dart';
 
 class RecipeList extends StatefulWidget {
   const RecipeList({Key? key}) : super(key: key);
@@ -233,10 +234,12 @@ class _RecipeListState extends State<RecipeList> {
     // that APIRecipeQuery returns.
     // It then builds a widget that displays asynchronous
     // data while it’s loading.
-    return FutureBuilder<APIRecipeQuery>(
+    return FutureBuilder<Response<Result<APIRecipeQuery>>>(
       // You assign the Future that getRecipeData returns to future.
-      future: getRecipeData(searchTextController.text.trim(),
-          currentStartPosition, currentEndPosition),
+      future: RecipeService.create().queryRecipes(
+          searchTextController.text.trim(),
+          currentStartPosition,
+          currentEndPosition),
       // builder is required; it returns a widget.
       builder: (context, snapshot) {
         // You check the connectionState. If the state is done,
@@ -253,7 +256,21 @@ class _RecipeListState extends State<RecipeList> {
           // If there’s no error, process the query results
           // and add query.hits to currentSearchList.
           loading = false;
-          final query = snapshot.data;
+
+          // snapshot.data is now a Response and not a string anymore.
+          // The body field is either the Success or Error that you
+          // defined above. Extract the value of body into result.
+          final result = snapshot.data?.body;
+          // If result is an error, return the current list of recipes.
+          if (result is Error) {
+            // Hit an error
+            inErrorState = true;
+            return _buildRecipeList(context, currentSearchList);
+          }
+          // Since result passed the error check,
+          // cast it as Success and extract its value into query.
+          final query = (result as Success).value;
+
           inErrorState = false;
           if (query != null) {
             currentCount = query.count;
@@ -337,21 +354,5 @@ class _RecipeListState extends State<RecipeList> {
       },
       child: recipeCard(recipe),
     );
-  }
-
-  // The method is asynchronous and returns a Future.
-  // It takes a query and the start and the end positions
-  // of the recipe data, which from and to represent, respectively.
-  Future<APIRecipeQuery> getRecipeData(String query, int from, int to) async {
-    // You define recipeJson, which stores the results from
-    // RecipeService().getRecipes() after it finishes.
-    // It uses the from and to fields from step 1.
-    final recipeJson = await RecipeService().getRecipes(query, from, to);
-    // The variable recipeMap uses Dart’s json.decode()
-    // to decode the string into a map of type Map<String, dynamic>.
-    final recipeMap = json.decode(recipeJson);
-    // You use the JSON parsing method you created in the previous
-    // chapter to create an APIRecipeQuery model.
-    return APIRecipeQuery.fromJson(recipeMap);
   }
 }
