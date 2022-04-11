@@ -12,3 +12,9 @@
 - In mobile apps, JSON code is usually parsed into the model objects that your app will work with.
 - You can write JSON parsing code yourself, but it’s usually easier to let a JSON package generate the parsing code for you.
 - json_annotation and json_serializable are packages that will let you generate the parsing code.
+
+## Chapter 11 - Networking in Flutter
+- The HTTP package is a simple-to-use set of methods for retrieving data from the internet.
+- The built-in json.decode transforms JSON strings into a map of objects that you can use in your code.
+- FutureBuilder is a widget that retrieves information from a Future.
+- GridView is useful for displaying columns of data.
